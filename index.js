@@ -3,6 +3,11 @@ const app = express();
 
 const port = 700;
 
+app.set('view engine' , 'ejs');
+app.set('views' , './views');
+
+
+
 app.get('/' , function(req , res){
     return res.end("<h1>server is runnuing</h1>");
 });
