@@ -1,0 +1,91 @@
+body{
+    margin: 0px;
+    background-color: lightgrey;
+}
+.card{
+  
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    height: auto;
+    background-color: white;
+    margin:auto;
+}
+
+.heading{
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+.heading h1{
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: grey;
+}
+.input-box-1, .input-box-2{
+    height: 60px;
+    border-bottom: 1px solid grey;
+    padding: 2px;
+}
+.input-box-1 label{
+    display: block;
+    color: rgb(128, 118, 118);
+}
+.input-box-1 input{
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+}
+.input-box-1 input:active{
+    outline: none;
+}
+
+.input-box-2{
+    display: flex;
+}
+#category{
+    width: 50%;
+    border-right: 1px solid grey;
+}
+#category select{
+    width:100%;
+    border: none;
+    outline: none;
+}
+#date-selector{
+    padding: 2px;
+    flex-grow: 1;
+}
+
+#date-selector label{
+    display: block;
+    color: rgb(128, 118, 118);
+}
+#date-selector input{
+    width:98%;
+    border: none;
+    outline: none;
+}
+
+    /* buttons */
+
+.btn{
+    text-align: center;
+   margin: 50px;  
+}
+.btn button{
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 2px;
+    cursor: pointer;
+}
+.btn button:hover{
+    box-shadow: 0 0 2px 2px lightgrey;
+}
+
+.btn span{
+    font-size:15px;
+}
+
+.lists{
+    border-top: 1px solid grey;
+}

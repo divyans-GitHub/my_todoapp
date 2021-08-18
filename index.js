@@ -6,13 +6,24 @@ const port = 700;
 app.set('view engine' , 'ejs');
 app.set('views' , './views');
 
+// middle ware for static files rendering
+app.use(express.static('assets'));
+
+//middleware for parsing Form;s data
+app.use(express.urlencoded());
 
 
-app.get('/' , function(req , res){
-    return res.end("<h1>server is runnuing</h1>");
+app.post('/add-to-do-task' , function(req , res){
+   console.log(req.body);
 });
 
-//http://localhost:64008/?code=9962b4c8d2cafed18154&state=d98254d47e0744feb2944fef19794a58
+app.get('/' , function(req , res){
+   
+    return res.render('home' ,{});
+    // return res.end("<h1>server is runnuing</h1>");
+});
+
+
 app.listen(port , function(err){
     if(err){
         console.log(`error in loading express server ${err}`);
