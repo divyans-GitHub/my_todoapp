@@ -31,6 +31,7 @@ body{
     color: rgb(128, 118, 118);
 }
 .input-box-1 input{
+  width: 98%;
   font-size: 0.9rem;
   border: none;
   outline: none;
