@@ -1,7 +1,15 @@
 const express = require('express');
 const app = express();
 
-const port = 700;
+const port = 7001;
+
+
+const db = require('./config/mongoose');
+
+const ToDoList = require('./models/to_do_list');
+
+
+
 
 app.set('view engine' , 'ejs');
 app.set('views' , './views');
@@ -14,7 +22,21 @@ app.use(express.urlencoded());
 
 
 app.post('/add-to-do-task' , function(req , res){
-   console.log(req.body);
+   //console.log(req.body);
+  ToDoList.create({
+     description: req.body.description,
+     category:req.body.category,
+     dueDate:req.body.dueDate
+    } , function(err , newList ){
+      if(err){
+          console.log("error in adding data to DataBase");
+          return;
+      }
+      console.log("new to-do List is created" , newList);
+     return res.redirect('back');
+  });
+
+
 });
 
 app.get('/' , function(req , res){

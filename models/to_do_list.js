@@ -10,13 +10,15 @@ const toDoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    date:{
-        type: date,
+    dueDate:{
+        type: Date,
         required: true
     }
 });
 
 // defining collection 
-const ToDoList = mongoose.model('to_do_list' ,toDoSchema );
+const ToDoList = mongoose.model('ToDoList' ,toDoSchema );
+// first thing is name of collection in DB and second one is name of schema
+
 
 module.exports = ToDoList;

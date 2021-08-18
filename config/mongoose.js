@@ -2,8 +2,10 @@ const mongoose = require('mongoose');
 
 // connecting to mongoDB
 
-mongoose.connect('mongodb://localhost/to_do_list_inDB',
-                   {useNewUrlParser: true, useUnifiedTopology: true} );
+mongoose.connect('mongodb://localhost/to_do_list_inDB',{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+} );
 
 
 //acquiring connection whether it is connect or not
